@@ -1,5 +1,23 @@
-requests
-firebase-admin
-urllib3
-beautifulsoup4
-python-dotenv
+# Number Boat Bot — Railway / general deployment requirements
+# Install:  pip install -r requirements.txt
+
+# Telegram API calls (required)
+requests>=2.28
+
+# HTTP lower layer pinned for requests compatibility
+urllib3>=1.26
+
+# HTML parsing used by the provider panels (required)
+beautifulsoup4>=4.11
+
+# Firebase Firestore storage (optional — bot falls back to local JSON)
+firebase-admin>=6.0
+
+# 2FA / TOTP helper (optional)
+pyotp>=2.7
+
+# Loads .env locally on Railway it is configured in Variables instead
+python-dotenv>=1.0
+
+# Image board rendering — dashboard/account/OTP/stock tables are sent as photos
+Pillow>=10.0
